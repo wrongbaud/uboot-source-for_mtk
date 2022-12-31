@@ -829,7 +829,7 @@ static int raspi_4byte_mode(int enable)
  * Set write enable latch with Write Enable command.
  * Returns negative if error occurred.
  */
-static inline int raspi_write_enable(void)
+ inline int raspi_write_enable(void)
 {
 	u8 code = OPCODE_WREN;
 

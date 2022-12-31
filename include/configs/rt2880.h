@@ -96,7 +96,7 @@ extern unsigned int  CFG_BLOCKSIZE;
 
 /* Abort */
 #define CONFIG_AUTOBOOT_KEYED
-#define CONFIG_AUTOBOOT_PROMPT "Autobooting in:\t%d s (type 'gl' to run U-Boot console)\n\n"
+#define CONFIG_AUTOBOOT_PROMPT "[VSS] Autobooting in:\t%d s (type 'gl' to run U-Boot console)\n\n"
 #define CONFIG_AUTOBOOT_STOP_STR "gl"
 
 #define CONFIG_BAUDRATE		115200

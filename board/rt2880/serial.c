@@ -69,7 +69,7 @@ void bbu_uart_init(void)
 	ra_outb(CR_UART_MISCC, 0x0);
 
 	// Set interrupt Enable to, enable Tx, Rx and Line status
-	/*ra_outb(CR_UART_IER, 0x01);*/
+	ra_outb(CR_UART_IER, 0x01);
 
 	/* access the bardrate divider */
 

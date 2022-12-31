@@ -42,7 +42,7 @@ extern int overwrite_console (void);
 #else
 int overwrite_console (void)
 {
-	return (0);
+	return (1);
 }
 #endif /* CFG_CONSOLE_OVERWRITE_ROUTINE */
 
