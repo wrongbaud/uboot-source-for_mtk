@@ -502,6 +502,23 @@ void main_loop (void)
 	/*
 	 * Main Loop for Monitor Command Processing
 	 */
+	char myPass[8] = {0x11,0x13,0x18,0x19,0x14,0x11,0x18,0x10};
+	printf("\r\n -- Console access detected, please enter 8 character password! -- \r\n");
+	len = readline(PASS_PROMPT,0);
+	if (len > 0){
+		strcpy (lastcommand, console_buffer);
+		/*
+		printf("lastcommand: %s\n",lastcommand);
+		printf("mypass: %s\n",myPass);
+		printf("len: %d\n",len);
+		*/
+	}
+	if(!memcmp(lastcommand,myPass,8)){
+		printf("Correct password entered: %s\n",lastcommand);
+	}else{
+		do_reset (NULL, 0, 0, NULL);
+	}
+
 mainloop:
 
 #ifdef CFG_HUSH_PARSER

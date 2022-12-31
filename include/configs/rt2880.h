@@ -126,7 +126,7 @@ extern unsigned int  CFG_BLOCKSIZE;
  * Miscellaneous configurable options
  */
 #define	CFG_LONGHELP				/* undef to save memory      */
-
+#define PASS_PROMPT "[PASS_PROMPT] # "
 #if defined (RT2880_FPGA_BOARD) || defined (RT2880_ASIC_BOARD) 
 #define	CFG_PROMPT		"RT2880 # "
 #elif defined (RT2883_FPGA_BOARD) || defined (RT2883_ASIC_BOARD) 
