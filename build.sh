@@ -8,4 +8,7 @@ sudo cp toolchain/buildroot-gcc342/libexec/gcc/mipsel-linux-uclibc/3.4.2/cc* $TO
 
 export CROSS_COMPILE=$TOOLDIR
 make
-scp uboot.bin pi@voidstar:research/mt7628
+fallocate -l 4M flashme.bin 
+dd if=uboot.bin of=flashme.bin bs=1M conv=notrunc
+scp flashme.bin pi@voidstar:research/mt7628
+scp uboot.bin pi@voidstar:research/mt7628/uboot-gl-mt300an.bin
